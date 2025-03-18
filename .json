@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "center": "3201",
+    "user": "8bc0745b-3ba3-4183-8a5c-989948cd7928"
+  },
+  "id": "32018bc0745b-3ba3-4183-8a5c-989948cd7928",
+  "timestamp": "2025-03-18T12:23:47.870Z",
+  "payload": [
+    { "subject": "user", "action": "add" },
+    { "subject": "user", "action": "get" },
+    { "subject": "inventario", "action": "add" },
+    { "subject": "inventario", "action": "get" }
+  ]
+}
