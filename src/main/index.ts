@@ -1,4 +1,3 @@
-import 'module-alias/register'
 import { setupApp } from './config/app'
 import env from './config/env'
 
