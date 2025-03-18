@@ -1,16 +1,17 @@
 {
     "version": 2,
-    "public": true,
     "builds": [
       {
-        "src": "package.json",
+        "src": "src/main/index.ts",
         "use": "@vercel/node",
-        "config": {
-          "includeFiles": ["prisma/**"]
-        }
+        "config": { "includeFiles": ["prisma/schema.prisma"] }
       }
     ],
     "routes": [
-      { "src": "/(.*)", "dest": "/" }
+      {
+        "src": "/(.*)",
+        "dest": "src/main/index.ts"
+      }
     ]
   }
+  
