@@ -1,4 +1,4 @@
-import { type validationParamsType, type ValidatorParams } from '@/presentation/validator/protocols/validator'
+import { type validationParamsType, type ValidatorParams } from '../../presentation/validator/protocols/validator'
 import { ZodError, type ZodSchema } from 'zod'
 
 export class ValidationZod implements ValidatorParams {

@@ -1,9 +1,9 @@
-import { DbAddNewUser } from '@/data/useCases/db-add-new-counted'
-import { countedTypeSchema } from '@/domain/usecases/addNewCounted'
-import { RepositoryPrisma } from '@/infra/db/repository-prisma'
-import { ValidationZod } from '@/presentation/validator/validatorZod'
-import { AddNewCountedController } from '@/presentation/controllers/addNewCountedrController'
-import { type Controller } from '@/presentation/protocols'
+import { DbAddNewUser } from '../../../data/useCases/db-add-new-counted'
+import { countedTypeSchema } from '../../../domain/usecases/addNewCounted'
+import { RepositoryPrisma } from '../../../infra/db/repository-prisma'
+import { ValidationZod } from '../../../presentation/validator/validatorZod'
+import { AddNewCountedController } from '../../../presentation/controllers/addNewCountedrController'
+import { type Controller } from '../../../presentation/protocols'
 
 export const makeAddNewCounted = (): Controller => {
   const schemaValidation = new ValidationZod(countedTypeSchema)

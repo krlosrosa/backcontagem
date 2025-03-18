@@ -1,4 +1,4 @@
-import { type AddNewCounted } from '@/domain/usecases//addNewCounted'
+import { type AddNewCounted } from '../../domain/usecases//addNewCounted'
 import { type AddNewCountedRepository } from '../protocols/addNewCountedRepository'
 
 export class DbAddNewUser implements AddNewCounted {

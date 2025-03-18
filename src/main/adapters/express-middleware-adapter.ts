@@ -1,4 +1,4 @@
-import { type Middleware } from '@/presentation/protocols'
+import { type Middleware } from '../../presentation/protocols'
 import { type Response, type NextFunction } from 'express'
 import { type CustomRequest } from './custom-accountId'
 

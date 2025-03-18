@@ -1,4 +1,4 @@
-import { type AddNewCountedRepository } from '@/data/protocols/addNewCountedRepository'
+import { type AddNewCountedRepository } from '../../data/protocols/addNewCountedRepository'
 import { PrismaClient } from '@prisma/client'
 
 export class RepositoryPrisma implements AddNewCountedRepository {

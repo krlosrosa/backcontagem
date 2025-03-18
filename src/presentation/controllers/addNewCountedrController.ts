@@ -2,7 +2,7 @@ import { type HttpResponse, type Controller } from '../protocols'
 import { badRequest, ok, serverError } from '../helpers'
 import { type ValidatorParams } from '../validator/protocols/validator'
 import { InvalidParamError } from '../errors/invalid-param-error'
-import { type AddNewCounted } from '@/domain/usecases/addNewCounted'
+import { type AddNewCounted } from '../../domain/usecases/addNewCounted'
 
 export class AddNewCountedController implements Controller {
   constructor (
