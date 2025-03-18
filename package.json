@@ -2,14 +2,16 @@
   "name": "back",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "build": "rimraf dist && tsc -p tsconfig-build.json",
-    "start": "cross-env NODE_ENV=production nodemon node dist/main/server.js",
-    "dev": "cross-env NODE_ENV=production nodemon --ext ts --exec ts-node src/main/server.ts",
-    "test": "jest",
-    "test:ci": "npm test -- --coverage",
-    "format": "eslint . --ext .ts --fix"
-  },
+"scripts": {
+  "build": "rimraf dist && tsc -p tsconfig-build.json",
+  "start": "cross-env NODE_ENV=production nodemon node dist/main/server.js",
+  "dev": "cross-env NODE_ENV=production nodemon --ext ts --exec ts-node src/main/server.ts",
+  "test": "jest",
+  "test:ci": "npm test -- --coverage",
+  "format": "eslint . --ext .ts --fix",
+  "prisma:generate": "prisma generate",
+  "prisma:migrate": "prisma migrate dev --name init"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
