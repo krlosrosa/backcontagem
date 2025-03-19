@@ -1,9 +1,12 @@
 {
     "version": 2,
     "buildCommand": "npm run build",
-    "builds": [
-        { "src": "dist/main/index.js", "use": "@vercel/node" }
-    ],
+    "functions": {
+        "dist/main/index.js": {
+          "memory": 3009,
+          "maxDuration": 30
+        }
+    },
     "outputDirectory": "dist",
     "routes": [
         {
