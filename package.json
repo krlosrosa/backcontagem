@@ -4,7 +4,7 @@
   "main": "index.js",
 "scripts": {
   "start": "node dist/main/index.js",
-  "prebuild": "rimraf dist && tsc -p tsconfig-build.json",
+  "build": "rimraf dist && tsc -p tsconfig-build.json",
   "dev": "cross-env NODE_ENV=production nodemon --ext ts --exec ts-node src/main/index.ts",
   "test": "jest",
   "test:ci": "npm test -- --coverage",
