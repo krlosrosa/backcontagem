@@ -1,5 +1,9 @@
 {
     "version": 2,
+    "buildCommand": "npm run build",
+    "builds": [
+        { "src": "dist/main/index.js", "use": "@vercel/node" }
+    ],
     "outputDirectory": "dist",
     "routes": [
         {
