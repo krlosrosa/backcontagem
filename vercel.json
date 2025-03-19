@@ -1,11 +1,13 @@
 {
     "version": 2,
+    "builds": [
+        { "src": "*.js", "use": "@vercel/node" }
+    ],
     "functions": {
-        "dist/main/index.js": {
+        "api/test.js": {
+          "memory": 3009,
           "maxDuration": 30
-        }
-    },
-
+        },
     "outputDirectory": "dist",
     "routes": [
         {
