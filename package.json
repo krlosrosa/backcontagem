@@ -3,9 +3,14 @@
   "version": "1.0.0",
   "main": "index.js",
 "scripts": {
-  "prebuild": "rimraf dist && prisma generate",
-  "build": "tsc -p tsconfig-build.json",
   "start": "node dist/main/index.js",
+  "prebuild": "rimraf dist && tsc -p tsconfig-build.json",
+  "dev": "cross-env NODE_ENV=production nodemon --ext ts --exec ts-node src/main/index.ts",
+  "test": "jest",
+  "test:ci": "npm test -- --coverage",
+  "format": "eslint . --ext .ts --fix",
+  "prisma:generate": "npx prisma generate",
+  "prisma:migrate": "npx prisma migrate dev --name init",
   "postinstall": "prisma generate && prisma migrate deploy"
 },
   "keywords": [],
