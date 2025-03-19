@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
 "scripts": {
+  "postbuild": "npm run start",
   "start": "cross-env NODE_ENV=production node dist/main/index.js",
   "build": "rimraf dist && tsc -p tsconfig-build.json",
   "dev": "cross-env NODE_ENV=production nodemon --ext ts --exec ts-node src/main/index.ts",
@@ -11,7 +12,8 @@
   "format": "eslint . --ext .ts --fix",
   "prisma:generate": "npx prisma generate",
   "prisma:migrate": "npx prisma migrate dev --name init",
-  "postinstall": "prisma generate && prisma migrate deploy"
+  "postinstall": "prisma generate && prisma migrate deploy",
+  "pos"
 },
   "keywords": [],
   "author": "",
