@@ -1,10 +1,10 @@
-# Use a imagem base oficial do Node.js
-FROM node:14
+# Use a imagem oficial do Node.js
+FROM node:20
 
 # Defina o diretório de trabalho dentro do contêiner
 WORKDIR /app
 
-# Copie o package.json e o package-lock.json para o diretório de trabalho
+# Copie apenas os arquivos necessários para instalar as dependências
 COPY package*.json ./
 
 # Instale as dependências da aplicação
@@ -13,8 +13,11 @@ RUN npm install
 # Copie o restante do código da aplicação para o diretório de trabalho
 COPY . .
 
+# Compile o TypeScript
+RUN npm run build
+
 # Exponha a porta que a aplicação irá usar
 EXPOSE 3000
 
 # Comando para iniciar a aplicação
-CMD ["node", "app.js"]
+CMD ["npm", "start"]
