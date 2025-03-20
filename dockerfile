@@ -7,6 +7,8 @@ WORKDIR /app
 # Copie apenas os arquivos necessários para instalar dependências
 COPY package*.json ./
 
+COPY prisma ./prisma
+
 # Instale as dependências
 RUN npm install --legacy-peer-deps
 
