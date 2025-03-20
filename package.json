@@ -10,8 +10,7 @@
   "test:ci": "npm test -- --coverage",
   "format": "eslint . --ext .ts --fix",
   "prisma:generate": "npx prisma generate",
-  "prisma:migrate": "npx prisma migrate dev --name init",
-  "postinstall": "prisma generate && prisma migrate deploy"
+  "prisma:migrate": "npx prisma migrate dev --name init"
 },
   "keywords": [],
   "author": "",
