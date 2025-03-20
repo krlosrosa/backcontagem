@@ -13,7 +13,6 @@ RUN npm install
 # Copie o restante do código da aplicação para o diretório de trabalho
 COPY . .
 
-# Compile o TypeScript
 RUN npm run build
 
 # Exponha a porta que a aplicação irá usar
